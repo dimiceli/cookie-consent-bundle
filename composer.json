@@ -1,0 +1,33 @@
+{
+    "name": "dimiceli/cookie-consent-bundle",
+    "description": "Symfony Bundle to apply GDPR cookie requirements to your site.",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^8.0",
+        "symfony/config": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/http-kernel": "^5.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Di Miceli",
+            "email": "dimicelibruno@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DiMiceli\\CookieConsentBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DiMiceli\\CookieConsentBundle\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^5.2",
+        "symfony/framework-bundle": "^5.2",
+        "symfony/browser-kit": "^5.2"
+    }
+}

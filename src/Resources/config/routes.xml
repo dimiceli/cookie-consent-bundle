@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<routes xmlns="http://symfony.com/schema/routing"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://symfony.com/schema/routing
+        http://symfony.com/schema/routing/routing-1.0.xsd">
+    <route id="dm_cookie_consent_view" controller="dimiceli_cookie_consent.cookie_consent_controller::view" path="gdpr/cookie-consent" >
+        <!-- settings -->
+    </route>
+</routes>

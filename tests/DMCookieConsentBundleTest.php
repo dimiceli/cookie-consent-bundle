@@ -4,7 +4,7 @@ namespace DiMiceli\CookieConsentBundle\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-class DMCookieConsentBundle extends TestCase
+class DMCookieConsentBundleTest extends TestCase
 {
     public function testFuck()
     {

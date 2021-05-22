@@ -4,6 +4,11 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="DiMiceli\CookieConsentBundle\DMCookieConsentBundle" alias="dimiceli_cookie_consent.cookie_consent_bundle"  public="false" />
+        <service id="dimiceli_cookie_consent.cookie_consent_controller" class="DiMiceli\CookieConsentBundle\Controller\CookieConsentController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="Psr\Container\ContainerInterface"/>
+            </call>
+            <tag name="container.service_subscriber"/>
+        </service>
     </services>
 </container>
