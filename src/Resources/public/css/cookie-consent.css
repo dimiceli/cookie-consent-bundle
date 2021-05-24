@@ -1,0 +1,52 @@
+
+:root {
+    --dm-cookie-consent-title-color: #ff7246;
+    --dm-cookie-consent-text-color: white;
+    --dm-cookie-consent-background-color: rgba(0, 0, 0, 0.9);
+    --dm-cookie-consent-button-color: #ff7246;
+    --dm-cookie-consent-button-color-hover: #ff9565;
+    --dm-cookie-consent-button-label-color: white;
+}
+
+.dm-cookie-consent-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--dm-cookie-consent-background-color);
+    color: var(--dm-cookie-consent-text-color);
+    padding: 20px 30px;
+    z-index: 99999;
+}
+
+.dm-cookie-consent-container h3 {
+    color: var(--dm-cookie-consent-title-color);
+    margin-bottom: 10px;
+}
+
+.dm-cookie-consent-container p {
+    color: var(--dm-cookie-consent-text-color);
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.dm-cookie-consent-container .dm-cookie-consent-container-button-container {
+    width: 100%;
+    margin: 0px;
+    text-align: right;
+}
+
+.dm-cookie-consent-container .dm-cookie-consent-container-button-container button {
+    font-weight: bold;
+    border: 0px;
+    background-color: var(--dm-cookie-consent-button-color);
+    color: var(--dm-cookie-consent-button-label-color);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-right: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dm-cookie-consent-container .dm-cookie-consent-container-button-container button:hover {
+    background-color: var(--dm-cookie-consent-button-color-hover);
+}
