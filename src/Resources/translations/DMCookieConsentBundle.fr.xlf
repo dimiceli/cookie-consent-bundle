@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="dm_cookie_consent.title" resname="dm_cookie_consent.title">
+        <source>dm_cookie_consent.title</source>
+        <target>Acceptation des cookies</target>
+      </trans-unit>
+      <trans-unit id="dm_cookie_consent.text" resname="dm_cookie_consent.text">
+        <source>dm_cookie_consent.text</source>
+        <target><![CDATA[Les cookies sont des fichiers créés sur votre ordinateur qui conservent des données sur votre navigation. Ces données nous aident ainsi à améliorer le contenu que nous vous proposons et nous permettent aussi de vous offrir une meilleure expérience de navigation. En utilisant ce site, vous déclarez accepter l'utilisation que nous faisons des cookies.]]></target>
+      </trans-unit>
+      <trans-unit id="dm_cookie_consent.accept" resname="dm_cookie_consent.accept">
+        <source>dm_cookie_consent.accept</source>
+        <target>Accepter</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
