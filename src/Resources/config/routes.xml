@@ -3,7 +3,6 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/routing
         http://symfony.com/schema/routing/routing-1.0.xsd">
-    <route id="dm_cookie_consent_view" controller="dimiceli_cookie_consent.cookie_consent_controller::view" path="gdpr/cookie-consent" >
-        <!-- settings -->
-    </route>
+    <route id="dm_cookie_consent_view" controller="dimiceli_cookie_consent.cookie_consent_controller::view" path="gdpr/cookie-consent/view" />
+    <route id="dm_cookie_consent_save" controller="dimiceli_cookie_consent.cookie_consent_controller::save" path="gdpr/cookie-consent/save" />
 </routes>
