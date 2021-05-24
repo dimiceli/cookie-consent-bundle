@@ -1,7 +1,10 @@
-<div class="dm-cookie-consent-container">
+{% if  DMCookieConsentBundle_has_not_cookie_consent() %}
+<div id="dm-cookie-consent-container" class="dm-cookie-consent-container">
     <h1>Title</h1>
     <p>Content</p>
     {{ form_start(cookie_consent_form) }}
-    <input type="submit" value="save"/>
+    <button id="dm-cookie-consent-button-accept">accept</button>
     {{ form_end(cookie_consent_form) }}
 </div>
+<script src="{{ asset('bundles/dmcookieconsent/js/cookie-consent.js') }}"></script>
+{% endif %}

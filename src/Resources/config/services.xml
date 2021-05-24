@@ -5,10 +5,17 @@
         http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="dimiceli_cookie_consent.cookie_consent_controller" class="DiMiceli\CookieConsentBundle\Controller\CookieConsentController" public="true">
+            <argument type="service" id="DiMiceli\CookieConsentBundle\Cookie\CookieHandler"/>
             <call method="setContainer">
                 <argument type="service" id="Psr\Container\ContainerInterface"/>
             </call>
             <tag name="container.service_subscriber"/>
+        </service>
+        <service id="DiMiceli\CookieConsentBundle\Cookie\CookieHandler" public="true"/>
+        <service id="DiMiceli\CookieConsentBundle\Twig\DMCookieConsentExtension" public="false">
+            <argument type="service" id="request_stack"/>
+            <argument type="service" id="DiMiceli\CookieConsentBundle\Cookie\CookieHandler"/>
+            <tag name="twig.extension"/>
         </service>
     </services>
 </container>

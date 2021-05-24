@@ -6,7 +6,13 @@
         "php": "^8.0",
         "symfony/config": "^5.2",
         "symfony/dependency-injection": "^5.2",
-        "symfony/http-kernel": "^5.2"
+        "symfony/framework-bundle": "^5.2",
+        "symfony/http-kernel": "^5.2",
+        "symfony/templating": "^5.2",
+        "symfony/translation": "^5.2",
+        "symfony/twig-bridge": "^5.2",
+        "symfony/twig-bundle": "^5.2",
+        "twig/twig": "^2.6 || ^3.0"
     },
     "license": "MIT",
     "authors": [
@@ -27,7 +33,6 @@
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^5.2",
-        "symfony/framework-bundle": "^5.2",
         "symfony/browser-kit": "^5.2"
     }
 }
