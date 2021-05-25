@@ -4,8 +4,10 @@
     "type": "symfony-bundle",
     "require": {
         "php": "^7.2 || ^8.0",
+        "symfony/assets": "^5.2",
         "symfony/config": "^5.2",
         "symfony/dependency-injection": "^5.2",
+        "symfony/form": "^5.2",
         "symfony/framework-bundle": "^5.2",
         "symfony/http-kernel": "^5.2",
         "symfony/templating": "^5.2",

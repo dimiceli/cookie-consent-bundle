@@ -1,14 +1,16 @@
 {% trans_default_domain('DMCookieConsentBundle') %}
 
 {% if  DMCookieConsentBundle_has_not_cookie_consent() %}
-<div id="dm-cookie-consent-container" class="dm-cookie-consent-container">
-    <h3>{{ 'dm_cookie_consent.title'|trans }}</h3>
-    <p>{{ 'dm_cookie_consent.text'|trans }}</p>
-    {{ form_start(cookie_consent_form) }}
-    <div class="dm-cookie-consent-container-button-container" >
-        <button id="dm-cookie-consent-button-accept">{{ 'dm_cookie_consent.accept'|trans }}</button>
+    <div id="dm-cookie-consent-container" class="dm-cookie-consent-container">
+        <div class="dm-cookie-consent-container-inner">
+            <h3>{{ 'dm_cookie_consent.title'|trans }}</h3>
+            <p>{{ 'dm_cookie_consent.text'|trans }}</p>
+            {{ form_start(cookie_consent_form) }}
+            <div class="dm-cookie-consent-container-button-container" >
+                <button id="dm-cookie-consent-button-accept">{{ 'dm_cookie_consent.accept'|trans }}</button>
+            </div>
+            {{ form_end(cookie_consent_form) }}
+        </div>
     </div>
-    {{ form_end(cookie_consent_form) }}
-</div>
-<script src="{{ asset('bundles/dmcookieconsent/js/cookie-consent.js') }}"></script>
+    <script src="{{ asset('bundles/dmcookieconsent/js/cookie-consent.js') }}"></script>
 {% endif %}
