@@ -24,5 +24,8 @@ class DMCookieConsentExtension extends Extension
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $twigExtensionDefinition = $container->getDefinition('DiMiceli\CookieConsentBundle\Twig\DMCookieConsentExtension');
+        $twigExtensionDefinition->setArgument(2, $config['show_title']);
     }
 }

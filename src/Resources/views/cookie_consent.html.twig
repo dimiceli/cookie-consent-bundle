@@ -3,7 +3,9 @@
 {% if  DMCookieConsentBundle_has_not_cookie_consent() %}
     <div id="dm-cookie-consent-container" class="dm-cookie-consent-container">
         <div class="dm-cookie-consent-container-inner">
+            {% if DMCookieConsentBundle_show_title() %}
             <h3>{{ 'dm_cookie_consent.title'|trans }}</h3>
+            {% endif %}
             <p>{{ 'dm_cookie_consent.text'|trans }}</p>
             {{ form_start(cookie_consent_form) }}
             <div class="dm-cookie-consent-container-button-container" >

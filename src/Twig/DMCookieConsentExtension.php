@@ -19,28 +19,36 @@ class DMCookieConsentExtension extends AbstractExtension
 {
     private $request;
     private $cookieHandler;
+    private $showTitle;
 
-    public function __construct(RequestStack $requestStack, CookieHandler $cookieHandler)
+    public function __construct(RequestStack $requestStack, CookieHandler $cookieHandler, bool $showTitle=true)
     {
         $this->request = $requestStack->getMasterRequest();
         $this->cookieHandler = $cookieHandler;
+        $this->showTitle = $showTitle;
     }
 
     public function getFunctions()
     {
         return [
             new TwigFunction('DMCookieConsentBundle_has_cookie_consent', [$this, 'hasCookieConsent']),
-            new TwigFunction('DMCookieConsentBundle_has_not_cookie_consent', [$this, 'hasNotCookieConsent'])
+            new TwigFunction('DMCookieConsentBundle_has_not_cookie_consent', [$this, 'hasNotCookieConsent']),
+            new TwigFunction('DMCookieConsentBundle_show_title', [$this, 'showTitle'])
         ];
     }
 
-    public function hasCookieConsent()
+    public function hasCookieConsent(): bool
     {
         return $this->cookieHandler->hasCookie($this->request);
     }
 
-    public function hasNotCookieConsent()
+    public function hasNotCookieConsent(): bool
     {
         return !$this->cookieHandler->hasCookie($this->request);
+    }
+
+    public function showTitle(): bool
+    {
+        return $this->showTitle;
     }
 }

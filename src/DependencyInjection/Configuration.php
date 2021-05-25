@@ -25,6 +25,9 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('bottom')
                     ->values(['bottom', 'top'])
                 ->end()
+                ->booleanNode('show_title')
+                    ->defaultTrue()
+                ->end()
             ->end();
         return $treeBuilder;
     }
