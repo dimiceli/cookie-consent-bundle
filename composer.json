@@ -3,7 +3,7 @@
     "description": "Symfony Bundle to apply GDPR cookie requirements to your site.",
     "type": "symfony-bundle",
     "require": {
-        "php": "^8.0",
+        "php": "^7.2 || ^8.0",
         "symfony/config": "^5.2",
         "symfony/dependency-injection": "^5.2",
         "symfony/framework-bundle": "^5.2",
