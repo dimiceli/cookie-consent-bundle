@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->enumNode('position')
                     ->defaultValue('bottom')
-                    ->values(['bottom', 'modal', 'top'])
+                    ->values(['bottom', 'top'])
                 ->end()
             ->end();
         return $treeBuilder;
