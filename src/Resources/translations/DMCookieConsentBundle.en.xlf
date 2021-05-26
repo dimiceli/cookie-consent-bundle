@@ -15,7 +15,7 @@
       </trans-unit>
       <trans-unit id="dm_cookie_consent.accept" resname="dm_cookie_consent.accept">
         <source>dm_cookie_consent.accept</source>
-        <target>Accepter</target>
+        <target>Accept</target>
       </trans-unit>
     </body>
   </file>
