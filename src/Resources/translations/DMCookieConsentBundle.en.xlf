@@ -11,7 +11,7 @@
       </trans-unit>
       <trans-unit id="dm_cookie_consent.text" resname="dm_cookie_consent.text">
         <source>dm_cookie_consent.text</source>
-        <target><![CDATA[Cookies are files created on your computer that store data on your browser. These data thus help us to improve the content we offer you and also allow us to offer you a better browsing experience. By using this site, you declare that you accept our use of cookies.]]></target>
+        <target><![CDATA[Cookies are files created on your computer that store data on your browser. These data help us to improve the content we offer you and also allow us to offer you a better browsing experience. By using this site, you declare that you accept our use of cookies.]]></target>
       </trans-unit>
       <trans-unit id="dm_cookie_consent.accept" resname="dm_cookie_consent.accept">
         <source>dm_cookie_consent.accept</source>
