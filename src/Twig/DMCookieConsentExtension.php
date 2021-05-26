@@ -1,9 +1,9 @@
 <?php
 /**
  *  This file is part of the Symfony package.
- *  
+ *
  *  (c) Bruno Di Miceli <dimicelibruno@gmail.com>
- *  
+ *
  *  For the full copyright and license information, please view the LICENSE
  *  file that was distributed with this source code.
  */
@@ -21,7 +21,7 @@ class DMCookieConsentExtension extends AbstractExtension
     private $cookieHandler;
     private $showTitle;
 
-    public function __construct(RequestStack $requestStack, CookieHandler $cookieHandler, bool $showTitle=true)
+    public function __construct(RequestStack $requestStack, CookieHandler $cookieHandler, bool $showTitle = true)
     {
         $this->request = $requestStack->getMasterRequest();
         $this->cookieHandler = $cookieHandler;
@@ -33,7 +33,7 @@ class DMCookieConsentExtension extends AbstractExtension
         return [
             new TwigFunction('DMCookieConsentBundle_has_cookie_consent', [$this, 'hasCookieConsent']),
             new TwigFunction('DMCookieConsentBundle_has_not_cookie_consent', [$this, 'hasNotCookieConsent']),
-            new TwigFunction('DMCookieConsentBundle_show_title', [$this, 'showTitle'])
+            new TwigFunction('DMCookieConsentBundle_show_title', [$this, 'showTitle']),
         ];
     }
 

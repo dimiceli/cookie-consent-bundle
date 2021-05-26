@@ -14,5 +14,4 @@ use Symfony\Component\Form\AbstractType;
 
 class CookieConsentType extends AbstractType
 {
-
 }

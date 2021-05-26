@@ -1,9 +1,9 @@
 <?php
 /**
  *  This file is part of the Symfony package.
- *  
+ *
  *  (c) Bruno Di Miceli <dimicelibruno@gmail.com>
- *  
+ *
  *  For the full copyright and license information, please view the LICENSE
  *  file that was distributed with this source code.
  */
@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
+use Symfony\Bundle\TwigBundle\TwigBundle;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
@@ -26,7 +27,7 @@ class CookieConsentControllerTest extends TestCase
     {
         $kernel = new DiMiceliCookieConsentControllerKernel();
         $client = new KernelBrowser($kernel);
-        $client->request('GET', '/gdpr/cookie-consent');
+        $client->request('GET', '/gdpr/cookie-consent/view');
         $this->assertSame(200, $client->getResponse()->getStatusCode());
     }
 }
@@ -45,6 +46,7 @@ class DiMiceliCookieConsentControllerKernel extends Kernel
         return [
             new DMCookieConsentBundle(),
             new FrameworkBundle(),
+            new TwigBundle(),
         ];
     }
 
@@ -55,9 +57,12 @@ class DiMiceliCookieConsentControllerKernel extends Kernel
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        $c->loadFromExtension('framework', [
-            'router' => ['utf8' => true]
-        ]);
+        $c->loadFromExtension(
+            'framework',
+            [
+                'router' => ['utf8' => true],
+            ]
+        );
     }
 
     public function getCacheDir()
