@@ -21,7 +21,7 @@ matrix:
     - php: 7.3
     - php: 7.4
     - php: 8.0
-      env: COVERAGE=true PHPUNIT_FLAGS="-v --coverage-text"
+      env: XDEBUG_MODE=coverage COVERAGE=true PHPUNIT_FLAGS="-v --coverage-text"
       # Test LTS versions. This makes sure we do not use Symfony packages with version greater
       # than 5.2. Read more at https://github.com/symfony/lts
     #- php: 8.0
