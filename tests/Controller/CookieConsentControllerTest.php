@@ -61,6 +61,7 @@ class DiMiceliCookieConsentControllerKernel extends Kernel
             'framework',
             [
                 'router' => ['utf8' => true],
+                'secret' => '%env(APP_SECRET)%'
             ]
         );
     }
