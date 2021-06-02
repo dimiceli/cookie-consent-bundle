@@ -49,7 +49,7 @@ class CookieHandler
             Cookie::create(
                 $this->cookieName,
                 true,
-                date_create(strtotime('+1 year')),
+                date_create('+1 year'),
                 '/',
                 null,
                 $this->secure,
