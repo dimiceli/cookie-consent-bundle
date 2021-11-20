@@ -23,7 +23,7 @@ class DMCookieConsentExtension extends AbstractExtension
 
     public function __construct(RequestStack $requestStack, CookieHandler $cookieHandler, bool $showTitle = true)
     {
-        $this->request = $requestStack->getMasterRequest();
+        $this->request = $requestStack->getMainRequest();
         $this->cookieHandler = $cookieHandler;
         $this->showTitle = $showTitle;
     }
